@@ -1,0 +1,188 @@
+@prefix : <http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/> .
+
+<http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52#hasFunction
+:hasFunction rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :空调 ;
+             rdfs:range :智能功能 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/supportsFunction
+:supportsFunction rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain :零部件 ;
+                  rdfs:range :智能功能 .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52#变频/定频
+<http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52#变频/定频> rdf:type owl:DatatypeProperty ;
+                                                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                                                               rdfs:domain :空调 ;
+                                                                               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/价格
+:价格 rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf owl:topDataProperty ;
+    rdfs:domain :空调 ;
+    rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/使用场景
+:使用场景 rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :空调 ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/冷暖类型
+:冷暖类型 rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :空调 ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/空调类型
+:空调类型 rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :空调 ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/能效等级
+:能效等级 rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :空调 ;
+      rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/产品分析功能
+:产品分析功能 rdf:type owl:Class ;
+        rdfs:subClassOf :智能分析 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/产品感知功能
+:产品感知功能 rdf:type owl:Class ;
+        rdfs:subClassOf :智能感知 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/产品运行功能
+:产品运行功能 rdf:type owl:Class ;
+        rdfs:subClassOf :智能交付 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/产品连接功能
+:产品连接功能 rdf:type owl:Class ;
+        rdfs:subClassOf :智能连接 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/外观设计
+:外观设计 rdf:type owl:Class ;
+      rdfs:subClassOf :空调 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/智能交付
+:智能交付 rdf:type owl:Class ;
+      rdfs:subClassOf :智能功能 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/智能分析
+:智能分析 rdf:type owl:Class ;
+      rdfs:subClassOf :智能功能 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/智能功能
+:智能功能 rdf:type owl:Class ;
+      rdfs:subClassOf :空调 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/智能感知
+:智能感知 rdf:type owl:Class ;
+      rdfs:subClassOf :智能功能 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/智能连接
+:智能连接 rdf:type owl:Class ;
+      rdfs:subClassOf :智能功能 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/活动分析功能
+:活动分析功能 rdf:type owl:Class ;
+        rdfs:subClassOf :智能分析 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/活动感知功能
+:活动感知功能 rdf:type owl:Class ;
+        rdfs:subClassOf :智能感知 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/活动执行功能
+:活动执行功能 rdf:type owl:Class ;
+        rdfs:subClassOf :智能交付 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/环境交互功能
+:环境交互功能 rdf:type owl:Class ;
+        rdfs:subClassOf :智能交付 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/环境分析功能
+:环境分析功能 rdf:type owl:Class ;
+        rdfs:subClassOf :智能分析 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/环境感知功能
+:环境感知功能 rdf:type owl:Class ;
+        rdfs:subClassOf :智能感知 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/用户分析功能
+:用户分析功能 rdf:type owl:Class ;
+        rdfs:subClassOf :智能分析 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/用户感知功能
+:用户感知功能 rdf:type owl:Class ;
+        rdfs:subClassOf :智能感知 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/用户支持功能
+:用户支持功能 rdf:type owl:Class ;
+        rdfs:subClassOf :智能交付 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/用户连接功能
+:用户连接功能 rdf:type owl:Class ;
+        rdfs:subClassOf :智能连接 .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/空调
+:空调 rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/alex/ontologies/2023/9/untitled-ontology-52/零部件
+:零部件 rdf:type owl:Class ;
+     rdfs:subClassOf :空调 .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
